@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   background-color: #1a1a1a;
-  // font-family: "Proxima Nova", proxima, sans-serif;
 }
 
 body {
@@ -10,15 +9,17 @@ body {
 
 img {
   display: block;
-  opacity: 0;
-  @include transition(opacity .45s cubic-bezier(0.645, 0.045, 0.355, 1));
+  // opacity: 0;
+  // @include transition(opacity .45s cubic-bezier(0.645, 0.045, 0.355, 1));
 
-  &.show {
-    opacity: 1;
-  }
+  // &.show {
+  //   opacity: 1;
+  // }
 }
 
-header {
+
+
+.site__header {
   box-sizing: border-box;
   position: relative;
   vertical-align: middle;
@@ -82,7 +83,9 @@ header {
 }
 
 
-main {
+
+
+.site__content {
   padding: 0 0 5rem;
   box-sizing: border-box;
   display: block;
@@ -105,15 +108,15 @@ section, footer, header {
 
 
   @include media($mobile) {
-    @include padding(3rem 15px);
+    @include padding(3rem 20px);
   }
 
   @include media($tablet) {
-    @include padding(4rem 20px);
+    @include padding(4rem 25px);
   }
 
   @include media($desktop) {
-    @include padding(6rem 30px);
+    @include padding(6rem 50px);
   }
 
 
@@ -135,7 +138,7 @@ section, footer, header {
 }
 
 #about {
-  padding-top: rem(300px);
+  padding-top: rem(350px);
   padding-bottom: rem(100px);
   background-color: #1a1a1a;
   color: #fff;
@@ -161,6 +164,10 @@ section, footer, header {
     }
 
     @include media($desktop) {
+      @include span-columns(6);
+    }
+
+    @include media($desktop-hd) {
       @include span-columns(6);
     }
 
@@ -478,6 +485,18 @@ figure {
       }
     }
 
+    @include media($desktop-hd) {
+      @include span-columns(3 of 12);
+
+      &:nth-of-type(3n) {
+        @include span-columns(3 of 12);
+      }
+
+      &:nth-of-type(4n) {
+        @include omega()
+      }
+    }
+
     margin-top: 2em;
     position: relative;
     overflow: hidden;
@@ -489,7 +508,7 @@ figure {
 
       img {
         display: block;
-        @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
+        // @include transition(all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1));
         z-index: 1;
       }
 

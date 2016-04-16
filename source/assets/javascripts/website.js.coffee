@@ -1,17 +1,22 @@
+randomDuration =->
+	$('img').each	->
+		n = (Math.floor(Math.random() * (3 - 1) + 1)) / 10
+		$(this).attr('data-wow-delay', n + 's')
+
 showImages = ->
-	imagesLoaded('img').on 'progress', (imagesLoadedInstance, image) ->
-		$('img').addClass('show')
-		
+	randomDuration()
+	$('img').addClass('wow fadeIn')	
 
 loadAnimation = ->
 	$.adaptiveBackground.run()
 	
-	
-
 ready = ->
+	loadAnimation()
 	showImages()
+	
+	new WOW().init()
 
 
-$(window).on 'load', loadAnimation()
+
 $(document).ready ->
   ready()

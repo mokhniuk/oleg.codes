@@ -10,7 +10,7 @@
 
     %link{:href => "/assets/images/favicon.png", :rel => "shortcut icon"}
 
-    %meta{:content => "Frontend & User Interface Developer.", :name => "description"}
+    %meta{:content => "Frontend User Interface Developer.", :name => "description"}
     %meta{:content => "Oleg Mokhniuk", :name => "author"}
     %meta{:content => "Front-end developer, UI/UX, Interface developer, HTML5, erb, haml, slim, CSS3, Less, Sass, Scss, JavaScript, jQuery, CoffeeScript, Ruby, Rails, Ruby on Rails, Middleman, olegmokhnyuk, olegmokhniuk, Oleg Mokhniuk, Oleg Mokhnyuk, Олег Мохнюк", :name => "keywords"}
     
@@ -21,8 +21,8 @@
     = tag(:meta, property: "og:locale", content: "en_US")
     = tag(:meta, property: "og:site_name", content: "Oleg Codes")
     = tag(:meta, property: "og:url", content: "http://oleg.codes")
-    = tag(:meta, property: "og:title", content: "Oleg Mokhniuk. Frontend & User Interface Developer.")
-    = tag(:meta, property: "og:description", content: "Personal website of Oleg Mokhniuk, Frontend & User Interface Developer.")
+    = tag(:meta, property: "og:title", content: "Oleg Mokhniuk")
+    = tag(:meta, property: "og:description", content: "Personal website of Oleg Mokhniuk, Frontend User Interface Developer.")
     = tag(:meta, property: "og:image", content: "/assets/images/favicon.png")
 
     = tag(:meta, property: "og:image:type", content: "image/png")
@@ -30,7 +30,7 @@
     = tag(:meta, property: "og:image:height", content: "300")
 
   %body{class: page_classes}
-    %main
+    %main.site__content
       = partial "/views/shared/header"
       = yield
       = partial "/views/shared/footer"
