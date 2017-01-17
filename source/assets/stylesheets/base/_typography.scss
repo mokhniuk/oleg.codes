@@ -2,7 +2,7 @@ body {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
-  font-family: proxima, $base-font-family;
+  font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
@@ -13,8 +13,6 @@ h3,
 h4,
 h5,
 h6 {
-  // font-family: $heading-font-family;
-  // font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -79,30 +77,6 @@ picture {
   margin: 0;
   max-width: 100%;
   height: auto;
-}
-
-
-
-@font-face {
-  font-family: "proxima";
-  src: url('/assets/fonts/proximanova-reg.eot');
-  src: url('/assets/fonts/proximanova-reg.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/proximanova-reg.woff') format('woff'),
-       url('/assets/fonts/proximanova-reg.ttf') format('truetype'),
-       url('/assets/fonts/proximanova-reg.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "proxima";
-  src: url('/assets/fonts/proximanova-bold.eot');
-  src: url('/assets/fonts/proximanova-bold.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/proximanova-bold.woff') format('woff'),
-       url('/assets/fonts/proximanova-bold.ttf') format('truetype'),
-       url('/assets/fonts/proximanova-bold.svg') format('svg');
-  font-weight: bold;
-  font-style: normal;
 }
 
 
